@@ -47,7 +47,7 @@ export default class WebSocketController extends EventDistributor {
   }
 
   public subscribe(name: string, callback: (...args: any) => void) {
-    // Subscribe websocket client to event
+    // Subscribe WebSocket client to event
     this.websocket.send(`Subscribe ${name}`);
 
     // Add callback
