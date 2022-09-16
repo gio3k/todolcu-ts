@@ -51,7 +51,7 @@ export default class WebSocketController extends EventDistributor {
     this.websocket.send(`Subscribe ${name}`);
 
     // Add callback
-    this.on(name, callback, true);
+    this.on(name, callback, false);
   }
 
   public static async initialize(lockfile: Lockfile): Promise<WebSocketController> {
